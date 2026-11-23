@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELDER MAP — Город без барьеров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="#">ELDER <span>MAP</span></a>
+
+    <nav>
+        <a href="#features">Возможности</a>
+        <a href="#about">О проекте</a>
+        <a href="#map">Карта</a>
+    </nav>
+
+    <select class="language" id="language">
+    <option value="ru">🇷🇺 Русский</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="uz">🇺🇿 O‘zbekcha</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="zh">🇨🇳 中文</option>
+    <option value="ja">🇯🇵 日本語</option>
+    <option value="ko">🇰🇷 한국어</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="hi">🇮🇳 हिन्दी</option>
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="uk">🇺🇦 Українська</option>
+    <option value="nl">🇳🇱 Nederlands</option>
+    <option value="fa">🇮🇷 فارسی</option>
+    <option value="kk">🇰🇿 Қазақша</option>
+    <option value="ky">🇰🇬 Кыргызча</option>
+</select>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">ГОРОД БЕЗ БАРЬЕРОВ</p>
+
+            <h1>
+                Москва становится<br>
+                ближе для каждого
+            </h1>
+
+            <p class="description">
+                ELDER MAP помогает пожилым людям
+                находить удобные маршруты, места отдыха
+                и важные объекты города.
+            </p>
+
+            <a href="#map" class="main-button">
+                Найти маршрут →
+            </a>
+        </div>
+
+        <div class="hero-icon">🗺️ </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Возможности ELDER MAP</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <div>🗺️ </div>
+                <h3>Удобные маршруты</h3>
+                <p>Прогулки с учётом доступности и комфорта.</p>
+            </article>
+
+            <article class="card">
+                <div>🪑 </div>
+                <h3>Места отдыха</h3>
+                <p>Находим скамейки, туалеты и места для отдыха.</p>
+            </article>
+
+            <article class="card">
+                <div>💊 </div>
+                <h3>Важные объекты</h3>
+                <p>Аптеки, медицинские учреждения и магазины.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="map" class="map-section">
+    <h2>Карта города</h2>
+
+    <p>
+        Найдите нужное место в Москве.
+        Карта позволяет приближать и перемещать изображение.
+    </p>
+
+    <iframe
+    id="elder-map"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=37.55%2C55.70%2C37.75%2C55.80&layer=mapnik"
+    width="100%"
+    height="450"
+    style="border: 2px solid #ddd; border-radius: 12px;"
+    title="Карта Москвы"
+    loading="lazy">
+</iframe>
+</section>
+        <h2>Карта города</h2>
+       <div class="map-filters">
+    <button onclick="showPlaces('pharmacy')">💊  Аптеки</button>
+    <button onclick="showPlaces('hospital')">🏥  Больницы</button>
+    <button onclick="showPlaces('rest')">🪑  Места отдыха</button>
+    <button onclick="showPlaces('toilet')">🚻  Туалеты</button>
+    <button onclick="showPlaces('museum')">🏛️  Музеи</button>
+    <button onclick="showPlaces('restaurant')">🍽️  Рестораны</button>
+</div>
+
+<p>
+
+        <p>
+            Скоро здесь появится интерактивная карта Москвы.
+        </p>
+
+        <div class="map-placeholder">
+            📍  Карта ELDER MAP
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2026 ELDER MAP. Город без барьеров.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
